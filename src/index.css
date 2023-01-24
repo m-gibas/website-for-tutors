@@ -15,18 +15,19 @@ body {
 }
 
 .container {
-  /* max-width: 50vw; */
   width: fit-content;
   min-height: 50vh;
-  margin: auto;
-
   display: flex;
-  gap: 0 1rem;
+  gap: 0 2rem;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 
-  border: solid 1px var(--clr-4);
+  /* border: solid 1px var(--clr-4); */
 
   /* display: grid;
   grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr)); */
@@ -44,6 +45,7 @@ body {
 
 .link {
   text-decoration: none;
+  font-size: 1.2rem;
   font-weight: 600;
   display: block;
   background: var(--clr-5);

@@ -24,13 +24,7 @@
   border: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
   padding: 2.5rem 2rem;
-  /* position: fixed; */
-  /* backface-visibility: hidden; */
-}
-
-.register-form--back {
-  /* transform: rotateY(180deg); */
-  display: none;
+  backface-visibility: hidden;
 }
 
 label {
@@ -74,9 +68,32 @@ input {
   transform-style: preserve-3d;
   transform-origin: center right;
   transition: transform 1s;
+  display: flex;
 }
 
 .is-flipped {
-  /* transform: translateX(-100%) rotateY(-180deg); */
   transform: translateX(-100%) rotateY(-180deg);
+}
+
+.register-form-front {
+  transform: translateX(50%);
+}
+.register-form-back {
+  transform: translateX(-50%) rotateY(180deg);
+}
+
+.switch-button {
+  width: fit-content;
+  padding: 0.5rem 1.2rem;
+  background-color: #ffffff;
+  color: var(--clr-1);
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: background-color 0.35s;
+}
+
+.switch-button:hover {
+  background-color: var(--clr-4);
 }
