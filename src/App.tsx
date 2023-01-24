@@ -1,25 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import Tile from './components/Tile';
+import Tutors from './components/Tutors';
+import Register from './components/Register';
+import Login from './components/Login';
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={
+          <div className="container">
+            <Link to="/register" className="link"><Tile text='Register' /></Link>
+            <Link to="/login" className="link"><Tile text='Log in' /></Link>
+            <Link to="/tutors" className="link"><Tile text='Tutors' /></Link>
+            <Link to="/about" className="link"><Tile text='About' /></Link>
+          </div>
+        }/>
+        <Route path='/register' element={ <Register /> } />
+        <Route path='/login' element={ <Login /> } />
+        <Route path='/tutors' element={ <Tutors />} />
+        <Route path='/about' element={ <p>About page <Link to="/">Main Page</Link></p> } />
+      </Routes>
+    </Router>
   );
 }
 
