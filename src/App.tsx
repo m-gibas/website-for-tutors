@@ -13,10 +13,11 @@ function App() {
       <Routes>
         <Route path='/' element={
           <div className="container">
-            <Link to="/register" className="link"><Tile text='Register' /></Link>
-            <Link to="/login" className="link"><Tile text='Log in' /></Link>
-            <Link to="/tutors" className="link"><Tile text='Tutors' /></Link>
-            <Link to="/about" className="link"><Tile text='About' /></Link>
+            <Link to="/register" className="mainpage-link"><Tile text='Register' /></Link>
+            <Link to="/login" className="mainpage-link"><Tile text='Log in' /></Link>
+            <Link to="/tutors" className="mainpage-link"><Tile text='Tutors' /></Link>
+            <Link to="/about" className="mainpage-link"><Tile text='About' /></Link>
+            <Link to="/about" className="mainpage-link"><Tile text='About' /></Link>
           </div>
         }/>
         <Route path='/register' element={ <Register /> } />
