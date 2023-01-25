@@ -71,7 +71,7 @@ function App() {
           <Tutors tutors={tutors}/>
         </>
     } />
-        {/* <Route path='/tutor/:id' element={ <AboutTutor /> } /> */}
+        <Route path='/tutor/:id' element={ <AboutTutor tutors={tutors}/> } />
         <Route path='/about' element={ <p>About page <Link to="/">Main Page</Link></p> } />
       </Routes>
     </Router>

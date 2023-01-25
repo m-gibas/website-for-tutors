@@ -25,8 +25,6 @@ const Tutors = ({ tutors }: TutorsProps) => {
         </div>
       <Link to="/" className="link">Main Page</Link>
     </div>
-
-    // <Route path='/tutor/:id' element={  } />
   )
 }
 
