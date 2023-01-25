@@ -1,4 +1,10 @@
 .tutors {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.tutor-link {
+  text-decoration: none;
+  word-break: break-all;
 }

@@ -1,7 +1,45 @@
-.tutor {
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500");
+
+.tutor-card {
   border: 1px solid black;
+  display: grid;
+  grid-template-columns: 40% auto;
+  background: rgba(0, 0, 0, 0.86);
+  border-radius: 0.75rem;
+  box-shadow: 0 22px 70px 4px rgba(0, 0, 0, 0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);
+  color: white;
+  /* align-items: center; */
+  transition: color 0.35s;
 }
 
-.tutor img {
-  width: 30%;
+.tutor-card:hover {
+  /* color: rgba(24, 182, 182, 0.8); */
+  color: var(--clr-3);
+}
+
+.tutor-img {
+  display: grid;
+  place-items: center;
+}
+
+.tutor-img img {
+  width: 55%;
+}
+
+.tutor-details {
+  padding: 1rem;
+  overflow-wrap: break-word;
+}
+
+.tutor-details p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: "Source Code Pro", monospace;
+  word-spacing: 100vw;
+}
+
+.tutor-details span {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--clr-4);
 }

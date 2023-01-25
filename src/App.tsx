@@ -3,11 +3,15 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import Tile from './components/Tile';
 import Tutors from './components/Tutors';
 import Register from './components/Register';
+import AboutTutor from './components/AboutTutor';
 
 
 export interface TutorsProps {
-    id: number
-    imgPath: string
+  id: number
+  name: string
+  surname: string
+  imgPath: string
+  short_desc: string
 }
 
 // tutors: obrazek, imie, nazwisko, krótki opis 
@@ -15,23 +19,38 @@ export interface TutorsProps {
 function App() {
   const [tutors, setTutors] = useState([{
     id: 1,
-    imgPath: "female-1.png"
+    name: "Giselle",
+    surname: "Stanev",
+    imgPath: "female-1.png",
+    short_desc: "Math teacher"
   },
   {
     id: 2,
-    imgPath: "female-2.png"
+    name: "Adelyn",
+    surname: "Soler",
+    imgPath: "female-2.png",
+    short_desc: "Physics teacher"
   },
   {
     id: 3,
-    imgPath: "female-3.png"
+    name: "Destinee",
+    surname: "Martinović",
+    imgPath: "female-3.png",
+    short_desc: "Biology teacher"
   },
   {
     id: 4,
-    imgPath: "male-1.png"
+    name: "Bernardo",
+    surname: "Brunty",
+    imgPath: "male-1.png",
+    short_desc: "Chemistry teacher"
   },
   {
     id: 5,
-    imgPath: "male-2.png"
+    name: "Onyekachi",
+    surname: "Nylund",
+    imgPath: "male-2.png",
+    short_desc: "Personal trainer"
   }] as TutorsProps[])
 
 
@@ -43,7 +62,7 @@ function App() {
             <Link to="/register" className="mainpage-link"><Tile text='Log in' /></Link>
             <Link to="/tutors" className="mainpage-link"><Tile text='Tutors' /></Link>
             <Link to="/about" className="mainpage-link"><Tile text='About' /></Link>
-            <Link to="/about" className="mainpage-link"><Tile text='About' /></Link>
+            <Link to="/about" className="mainpage-link"><Tile text='About2' /></Link>
           </div>
         }/>
         <Route path='/register' element={ <Register /> } />
@@ -52,6 +71,7 @@ function App() {
           <Tutors tutors={tutors}/>
         </>
     } />
+        {/* <Route path='/tutor/:id' element={ <AboutTutor /> } /> */}
         <Route path='/about' element={ <p>About page <Link to="/">Main Page</Link></p> } />
       </Routes>
     </Router>
