@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import Tutor from "../Tutor/Tutor"
 import './Tutors.css'
+import GoBackButton from "../GoBackButton"
 
 export interface TutorsProps {
   tutors: {
@@ -23,7 +24,7 @@ const Tutors = ({ tutors }: TutorsProps) => {
               </Link>
             ))}
         </div>
-      <Link to="/" className="link">Main Page</Link>
+      <GoBackButton />
     </div>
   )
 }

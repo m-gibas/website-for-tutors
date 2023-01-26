@@ -4,14 +4,18 @@
   --clr-3: #74b5d6;
   --clr-4: #dbc0ad;
   --clr-5: #a35336;
+  --clr-6: #a32217;
+}
+
+html {
+  background: linear-gradient(var(--clr-1), var(--clr-2));
+  background-attachment: fixed;
+  /* height: 100%; */
 }
 
 body {
   margin: 0;
   padding: 0;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(var(--clr-1), var(--clr-2));
 }
 
 .container {

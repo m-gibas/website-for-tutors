@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './Register.css'
-import { Link } from "react-router-dom"
+import GoBackButton from '../GoBackButton'
 
 const Register = () => {
     const [isFlipped, setIsFlipped] = useState(false)
@@ -41,8 +41,7 @@ const Register = () => {
     </div>
 
     <button className='switch-button' onClick={() => setIsFlipped(!isFlipped)}>Switch to {isFlipped ? 'Log in' : 'Register'}</button>
-    <Link to="/" className="link">Main Page</Link>
-
+    <GoBackButton />
     </div>
   )
 }

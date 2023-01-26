@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import Tile from './components/Tile';
 import Tutors from './components/Tutors';
 import Register from './components/Register';
 import AboutTutor from './components/AboutTutor';
+import GoBackButton from './components/GoBackButton';
 
 
 export interface TutorsProps {
@@ -53,6 +54,24 @@ function App() {
     short_desc: "Personal trainer"
   }] as TutorsProps[])
 
+  // for background mouse tracking (glowing cursor effect)
+  const [mousePosition, setMousePosition] = useState({});
+
+  useEffect (() => {
+    const handleMouseMove = (event: any) => {
+      setMousePosition({ x: event.clientX, y: event.clientY });
+    }
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener(
+        'mousemove',
+        handleMouseMove
+      )
+    }
+  }, []);
+
 
   return (
     <Router>
@@ -67,12 +86,17 @@ function App() {
         }/>
         <Route path='/register' element={ <Register /> } />
         <Route path='/tutors' element={ 
-        <>
-          <Tutors tutors={tutors}/>
-        </>
-    } />
+          <>
+            <Tutors tutors={tutors}/>
+          </>
+        } />
         <Route path='/tutor/:id' element={ <AboutTutor tutors={tutors}/> } />
-        <Route path='/about' element={ <p>About page <Link to="/">Main Page</Link></p> } />
+        <Route path='/about' element={ 
+          <div className="container">
+          {/* <p>About page <Link to="/">Main Page</Link></p>  */}
+          <GoBackButton />
+          </div>
+      } />
       </Routes>
     </Router>
   );
