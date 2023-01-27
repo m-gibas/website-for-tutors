@@ -1,11 +1,16 @@
 .about-tutor {
-  width: 50vw;
+  /* width: 50vw; */
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
+
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
 }
 
 .about-tutor img {
-  width: 50%;
+  width: 30%;
 }

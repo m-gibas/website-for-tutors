@@ -13,7 +13,7 @@ const GoBackButton = () => {
             onMouseLeave={() => setIsShown(false)} 
             className="main-page-button">{isShown ? "Go Back" : "Main Page"}
         </div>
-        <div className="return-icon"><img src="Images/arrow-return-left.svg" alt="arrow" /></div>
+        <div className="return-icon"><img src="/Images/arrow-return-left.svg" alt="arrow" /></div>
     </Link>
   )
 }

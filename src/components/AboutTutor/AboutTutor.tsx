@@ -2,6 +2,7 @@ import { useLocation, useParams } from "react-router"
 import { TutorsProps } from "../Tutors/Tutors"
 import { Link } from "react-router-dom";
 import './AboutTutor.css'
+import GoBackButton from "../GoBackButton";
 
 const AboutTutor = ({ tutors }: TutorsProps) => {
     const location = useLocation()
@@ -24,12 +25,12 @@ const AboutTutor = ({ tutors }: TutorsProps) => {
         {/* <h2>{tutor.id} {tutor.name}</h2> */}
 
         <Link to="/tutors" className="link">Tutors Page</Link>
-        <Link to="/" className="link">Main Page</Link>
-
+        <GoBackButton />
     </div>
     : <>
         <p>There is no tutor here with that id!</p>
-        <Link to="/" className="link">Main Page</Link>
+        <GoBackButton />
+
     </>
 
     

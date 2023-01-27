@@ -14,7 +14,7 @@ const Tutor = ({ tutor }: TutorProps) => {
   return (
     <div className="tutor-card">
         <div className='tutor-img'>
-            <img src={`./Images/${tutor.imgPath}`} alt="person"></img>
+            <img src={`/Images/${tutor.imgPath}`} alt="person"></img>
         </div>
         <div className='tutor-details'>
             <div >
