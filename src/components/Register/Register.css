@@ -1,7 +1,7 @@
 .register-container {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   flex-direction: column;
 
   position: absolute;

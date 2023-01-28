@@ -8,3 +8,24 @@
   text-decoration: none;
   word-break: break-all;
 }
+
+.tutors-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-direction: column;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.tutors-container h3 {
+  color: white;
+  font-size: 2rem;
+  padding: 0 0.15rem;
+  border-bottom: 4px solid;
+  border-image: linear-gradient(to left, var(--clr-4), var(--clr-3)) 1 0;
+  box-shadow: 1px 1px 11px 2px var(--clr-3), 0px 0px 3px 1px var(--clr-3) inset;
+  text-shadow: 2px 3px 5px var(--clr-6);
+}

@@ -15,17 +15,19 @@ export interface TutorsProps {
 
 const Tutors = ({ tutors }: TutorsProps) => {
   return (
-    <div className="register-container">
+    <>
+    <GoBackButton />
+    <div className="tutors-container">
       <h3>Our tutors!</h3>
         <div className="tutors">
           {tutors.map( (tutor) => ( 
-              <Link key={tutor.id} to={`/tutor/${tutor.id}`} className="tutor-link">
+            <Link key={tutor.id} to={`/tutor/${tutor.id}`} className="tutor-link">
                 <Tutor key={tutor.id} tutor={tutor} />
               </Link>
             ))}
         </div>
-      <GoBackButton />
     </div>
+  </>
   )
 }
 

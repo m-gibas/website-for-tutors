@@ -3,6 +3,12 @@
   position: relative;
 }
 
+.main-page-button-container {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
 .main-page-button {
   min-width: 5rem;
   font-size: 1.2rem;
