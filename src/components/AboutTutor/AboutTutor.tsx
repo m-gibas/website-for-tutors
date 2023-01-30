@@ -14,17 +14,17 @@ const AboutTutor = ({ tutors }: TutorsProps) => {
       <GoBackButton />
       <div className="about-tutor">
         <div className="about-tutor-card">
-          <div className='about-tutor-img'>
-              <img src={`/Images/${tutor.imgPath}`} alt="person"></img>
-          </div>
           <div className="about-tutor-details">
             <p>{`${tutor.name} ${tutor.surname}`}</p>
+            <img src={`/Images/${tutor.imgPath}`} alt="person"></img>
             <span>{tutor.short_desc}</span> <br />
-            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto eveniet culpa quas accusamus facilis, nam perferendis voluptatum ex aperiam harum animi veritatis. Vel quo accusantium architecto perspiciatis ducimus ad aliquid porro aut, deserunt delectus illum dolore, eum laudantium maiores ea!</span>
+            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto eveniet culpa quas accusamus facilis, nam perferendis voluptatum ex aperiam harum animi veritatis. Vel quo accusantium architecto perspiciatis ducimus ad aliquid porro aut, deserunt delectus illum dolore, eum laudantium maiores ea! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi dicta officia molestias perspiciatis ea fugiat quisquam illum aut, commodi saepe, et unde eius, cum eos id quae optio inventore rem sunt mollitia molestiae perferendis quis. Praesentium tempora temporibus repudiandae inventore, consequatur quod delectus magni, maiores vel ex obcaecati reprehenderit architecto dolorem ratione illum nemo! Delectus, ad beatae recusandae itaque facere est sed vel minus, accusamus aut quam error ullam velit explicabo magni enim in dicta ab quaerat cupiditate ipsa nesciunt id voluptatem dolores? Dolore cumque sapiente amet reprehenderit odit, eum quo, voluptates repudiandae labore impedit dolor veritatis nihil dolorum adipisci?</span>
+          </div>
+          <div className="back-to-tutors-button">
+            <Link to="/tutors" className="link">Tutors Page</Link>
           </div>
         </div>
 
-          <Link to="/tutors" className="link">Tutors Page</Link>
       </div>
     </>
     : <>

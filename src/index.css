@@ -46,21 +46,3 @@ body {
   cursor: pointer;
   box-shadow: 0 0 4px var(--clr-5);
 }
-
-.link {
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 600;
-  display: block;
-  background: var(--clr-5);
-  color: #fff;
-  padding: 1rem;
-  border-radius: 2rem;
-  cursor: pointer;
-  transition: color 0.3s;
-  box-shadow: 0 0 4px var(--clr-5);
-}
-
-.link:hover {
-  color: var(--clr-2);
-}
