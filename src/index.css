@@ -7,6 +7,10 @@
   --clr-6: #a32217;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   background: linear-gradient(var(--clr-1), var(--clr-2));
   background-attachment: fixed;
