@@ -1,9 +1,8 @@
 .about-tutor {
-  margin-top: 10%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .about-tutor-card {
@@ -14,6 +13,7 @@
   border-radius: 0.75rem;
   box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.46), 0 0 0 1px rgba(0, 0, 0, 0.3);
   color: white;
+  position: relative;
 }
 
 .about-tutor-details {
@@ -43,11 +43,12 @@
 }
 
 .back-to-tutors-button {
-  position: relative;
-  bottom: -5%;
-  left: 5%;
-  z-index: -1;
+  position: absolute;
+  top: 105%;
+  left: 50%;
+
   width: fit-content;
+  z-index: -1;
 }
 
 .link {
