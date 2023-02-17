@@ -4,7 +4,7 @@ import Tile from './components/Tile';
 import Tutors from './components/Tutors';
 import Register from './components/Register';
 import AboutTutor from './components/AboutTutor';
-import GoBackButton from './components/GoBackButton';
+import About from './components/About/About';
 
 
 export interface TutorsProps {
@@ -81,7 +81,6 @@ function App() {
             <Link to="/register" className="mainpage-link"><Tile text='Log in' /></Link>
             <Link to="/tutors" className="mainpage-link"><Tile text='Tutors' /></Link>
             <Link to="/about" className="mainpage-link"><Tile text='About' /></Link>
-            <Link to="/about" className="mainpage-link"><Tile text='About2' /></Link>
           </div>
         }/>
         <Route path='/register' element={ <Register /> } />
@@ -91,12 +90,7 @@ function App() {
           </>
         } />
         <Route path='/tutor/:id' element={ <AboutTutor tutors={tutors}/> } />
-        <Route path='/about' element={ 
-          <div className="container">
-          {/* <p>About page <Link to="/">Main Page</Link></p>  */}
-          <GoBackButton />
-          </div>
-      } />
+        <Route path='/about' element={ <About /> } />
       </Routes>
     </Router>
   );
