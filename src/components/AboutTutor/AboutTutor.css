@@ -6,8 +6,8 @@
 }
 
 .about-tutor-card {
-  width: 60vw;
-  height: 60vh;
+  width: 65vw;
+  min-height: 60vh;
   border: 1px solid black;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 0.75rem;
@@ -70,4 +70,22 @@
 
 .back-to-tutors-button:hover {
   z-index: 2;
+}
+
+@media only screen and (min-width: 600px) {
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 992px) {
+  .about-tutor-card {
+    width: 60vw;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .about-tutor-card {
+    width: 55vw;
+  }
 }

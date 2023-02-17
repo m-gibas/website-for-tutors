@@ -54,23 +54,23 @@ function App() {
     short_desc: "Personal trainer"
   }] as TutorsProps[])
 
-  // for background mouse tracking (glowing cursor effect)
-  const [mousePosition, setMousePosition] = useState({});
+  // // for background mouse tracking (glowing cursor effect)
+  // const [mousePosition, setMousePosition] = useState({});
 
-  useEffect (() => {
-    const handleMouseMove = (event: any) => {
-      setMousePosition({ x: event.clientX, y: event.clientY });
-    }
+  // useEffect (() => {
+  //   const handleMouseMove = (event: any) => {
+  //     setMousePosition({ x: event.clientX, y: event.clientY });
+  //   }
 
-    window.addEventListener('mousemove', handleMouseMove);
+  //   window.addEventListener('mousemove', handleMouseMove);
 
-    return () => {
-      window.removeEventListener(
-        'mousemove',
-        handleMouseMove
-      )
-    }
-  }, []);
+  //   return () => {
+  //     window.removeEventListener(
+  //       'mousemove',
+  //       handleMouseMove
+  //     )
+  //   }
+  // }, []);
 
 
   return (

@@ -18,7 +18,7 @@
   color: #ffffff;
 
   height: 55vh;
-  min-width: 35vw;
+  min-width: 65vw;
   border-radius: 1rem;
   background-color: rgba(255, 255, 255, 0.13);
   border: 2px solid rgba(255, 255, 255, 0.1);
@@ -96,4 +96,25 @@ input {
 
 .switch-button:hover {
   background-color: var(--clr-4);
+}
+
+@media only screen and (min-width: 600px) {
+}
+
+@media only screen and (min-width: 768px) {
+  .register-form {
+    min-width: 60vw;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .register-form {
+    min-width: 55vw;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .register-form {
+    min-width: 45vw;
+  }
 }
